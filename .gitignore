@@ -2,3 +2,4 @@ emails
 .ipynb_checkpoints
 .venv
 .env
+keystore
