@@ -3,3 +3,9 @@ emails
 .venv
 .env
 keystore
+.terraform**
+**/awscli-bundle
+*.zip
+*.backup
+*.tfstate
+*.tpl

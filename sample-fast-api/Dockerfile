@@ -8,7 +8,7 @@ WORKDIR /app
 
 RUN mkdir -p keystore
 
-RUN openssl req -x509 -newkey rsa:2048 -keyout keystore/key.pem -out keystore/cert.pem -days 365 -nodes -subj "/C=US/ST=ShortHills/L=New Jersey/O=Kuppa/OU=Home/CN=$HOSTNME.local"
+RUN openssl req -x509 -newkey rsa:2048 -keyout keystore/key.pem -out keystore/cert.pem -days 365 -nodes -subj "/C=US/ST=ShortHills/L=New Jersey/O=Kuppa/OU=Home/CN=saikuppa.local"
 
 COPY . .
 
