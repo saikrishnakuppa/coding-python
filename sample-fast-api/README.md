@@ -41,6 +41,24 @@ pip install -r requirements.txt
 
 # 4. Start the local server
 uvicorn src.main:app --reload
+
+# 5. Build docker image
+docker build --file Dockerfile --platform=linux/amd64  --tag "saikrishnakuppa/fast-api-docker-example" .
+
+# 6. Apply Tag to Docker image
+docker tag "saikrishnakuppa/fast-api-docker-example:latest" "saikrishnakuppa/fast-api-docker-example:latest"
+
+# 7. Push Docker image to DockerHub
+docker push "saikrishnakuppa/fast-api-docker-example:latest"
+
+# 8. Run Terrform to create AWS Infra
+terraform apply
+
+# 9. Test Application ALB after deploying
+https://application-load-balancer-1903635959.us-east-1.elb.amazonaws.com/sample/fast-api/docs
+
+# 10. Destroy AWS Infra after testing/validating (to save cost)
+terraform destroy
 ```
 
 ## Formatting
